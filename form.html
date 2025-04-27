@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vroum - Contact</title>
+    <link rel="icon" type="image/jpeg" href="img/logo.jpeg">
+    <link rel="stylesheet" href="css/form.css">
+    <script defer src="JS/form.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="nav-left">
+                    <a href="Accueil.html"><img src="img/logo.jpeg" alt="Logo Vroum" class="logo"></a>
+                </div>
+                <ul class="nav-center">
+                    <li><a href="Accueil.html">Accueil</a></li>
+                    <li><a href="Voitures.html">Nos Voitures</a></li>
+                    <li><a href="Concess.html">Nos Concessions</a></li>
+                    <li><a href="Faq.html">FAQ</a></li>
+                </ul>
+                <div class="nav-right">
+                    <a href="form.html" class="btn-login">Consulter un Conseiller</a>
+                </div>
+            </nav>
+        </header>
+
+        <main class="content">
+            <div class="formulaire">
+                <form>
+                    <div class="form-id">
+                        <div>
+                            <label for="Nom">Nom</label>
+                            <input type="text" id="Nom" name="Nom" placeholder="Cazalas">
+                        </div>
+                        <div>
+                            <label for="Prenom">Prenom</label>
+                            <input type="text" id="Prenom" name="Prenom" placeholder="Sébastien">
+                        </div>
+                    </div>
+
+                    <div class="form-cont">
+                        <div>
+                            <label for="email">Votre email</label>
+                            <input type="email" id="email" name="email" placeholder="votre@email.com">
+                        </div>
+                        <div class="telephone">
+                            <label for="téléphone">Votre numero de téléphone</label>
+                            <input type="tel" id="téléphone" name="téléphone" placeholder="06 12 34 56 78">
+                        </div>
+                    </div>
+                    <label for="type_question">Quelle est votre problème ?</label>
+                    <select id="type_question" name="type_question" onchange="toggleQuestionField()">
+                        <option value="">---</option>
+                        <option value="contacter">Contacter un conseiller</option>
+                        <option value="louer">Louer un bolide</option>
+                    </select>
+
+                    <div id="model-section" style="display:none;">
+                        <label for="modele">L'agence souhaitée:</label>
+                        <select id="modele" name="modele">
+                            <option value="Lyon">Lyon</option>
+                            <option value="Marseille">Marseille</option>
+                            <option value="Nantes">Nantes</option>
+                            <option value="Paris">Paris</option>
+                            <option value="Rennes">Rennes</option>
+                        </select>
+
+                        <label for="modele">Modèle de voiture :</label>
+                        <select id="modele" name="modele">
+                            <option value="">Sélectionnez un modèle</option>
+                            <option value="Alpine A110">Alpine A110</option>
+                            <option value="Aston-Martin-Vulcan-1">Aston-Martin Vulcan</option>
+                            <option value="audi-rsq8-front-view">Audi RSQ8</option>
+                            <option value="2023-audi-r8-v10-gt-rwd">Audi r8</option>
+                            <option value="BMW-X6M">BMW X6M</option>
+                            <option value="bugatti-tourbillon">Bugatti Tourbillon</option>
+                            <option value="Chevrolet Camaro">Chevrolet Camaro</option>
+                            <option value="novitec-ferrari-sf90-stradale-2022">Ferrari SF90 Stradale 2022</option>
+                            <option value="Aventador">Lamborgini Aventador</option>
+                            <option value="Urus">Lamborgini Urus</option>
+                            <option value="Maserati-MC20-Tributo-Modenese-Edition">Maserati MC20 Tributo Modenese Edition</option>
+                            <option value="mclaren-765lt-by-novitec">Mclaren 765lt</option>
+                            <option value="Mercedes GLA 35 AMG">Mercedes GLA 35 AMG</option>
+                            <option value="Porsche-Cayenne-hybride">Porsche Cayenne hybride</option>
+                            <option value="GT3-RS">Porche GT3-RS</option>
+                            <option value="Range-Rover-Velar">RangeRover Velar</option>
+                        </select>
+                    </div>
+
+                    <div id="other-question-section" style="display:none;">
+                        <label for="autre-question">Votre question :</label>
+                        <textarea id="autre-question" name="Autre-question" rows="10" cols="70"></textarea>
+                    </div>
+
+                    <input type="submit" value="Envoyez">
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
